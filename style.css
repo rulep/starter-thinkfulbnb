@@ -30,8 +30,14 @@ section.alternate-background {
   color: #fff;
 }
 
+img {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
 main img {
-  width: 100px;
+  max-width: 300px;
 }
 
 /* ---  Groups & Items --- */
@@ -43,11 +49,18 @@ main img {
 
 .item {
   flex: 1;
+  flex-direction: row;
   margin: 10px;
 }
 
 .item-double {
   flex: 2;
+}
+
+.about2 .idea4 .host1 {
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 /* -------  Navigation ------- */
@@ -134,7 +147,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media all and (min-width: 800px) {
   .group {
     flex-direction: row;
     align-items: center;
@@ -143,7 +156,6 @@ footer p {
   .item {
     flex: 1;
   }
-  
 
   header {
     display: flex;
@@ -158,7 +170,7 @@ footer p {
   form {
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
   }
 
   form select,
@@ -173,5 +185,4 @@ footer p {
   form div {
     flex-direction: column;
   }
-
 }
