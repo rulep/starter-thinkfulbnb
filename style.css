@@ -4,6 +4,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+
 h2 {
   font-size: 26px;
   font-weight: 400;
@@ -30,64 +31,72 @@ section.alternate-background {
   color: #fff;
 }
 
-img {
-  width: 100%;
-  flex-direction: row;
-  justify-content: center;
-}
-
 main img {
-  max-width: 300px;
+  width: 100px;
 }
 
 /* ---  Groups & Items --- */
 
-.group {
+.from-group .from-item form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+.from-group .from-item .from-item-field {
   display: flex;
   flex-direction: column;
+  margin-right: 24px;
 }
 
-#about {
+.from-group .from-item form .search-btn {
+  min-width: 120px;
+  width: auto;
+  padding: 8px 12px;
+  height: 45px;
+  font-size: 20px;
+}
+
+.from-group .from-item .from-field {
   display: flex;
+  justify-content: space-between;
 }
 
-.item {
-  flex: 1;
-  flex-direction: row;
-  margin: 10px;
-}
 
-.item-double {
-  flex: 2;
-}
+/* container */
 
-.about2 .idea4 .host1 {
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 30px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
   text-align: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+}
+
+.header-inner nav ul {
+  display: flex;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 50px;
+  font-size: 42px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
-}
-
-header nav ul {
-  display: flex;
 }
 
 header nav ul li {
@@ -107,26 +116,24 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  flex-wrap: wrap;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
 form label {
   font-weight: bold;
-  font-size: 18px;
-  padding-bottom: 5px;
 }
 
-form select,
+
 form input {
-  margin-bottom: 20px;
   width: 180px;
+  min-height: 32px;
+  padding: 0px 5px;
 }
 
-form div {
-  display: flex;
-  justify-content: space-between;
+form select {
+  min-height: 36px;
+    width: 180px;
 }
 
 form button {
@@ -136,6 +143,88 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+  cursor: pointer;
+}
+
+/* section stay */
+
+#stay {
+  padding: 40px 0px;
+}
+#stay h2 {
+  margin-bottom: 20px;
+}
+
+/* section about */
+
+.about-row {
+  display: flex;
+  align-items: center;
+}
+
+#about h2 {
+  margin-bottom: 30px;
+}
+
+.about-images {
+  display: flex;
+}
+
+.about-images .image img {
+  width: 100%;
+}
+
+/* ideas-row */
+
+.ideas-row {
+  display: flex;
+}
+
+#ideas h2 {
+  margin-bottom: 30px;
+}
+
+.idea-items img {
+  width: 100%;
+}
+
+.ideas-row .half {
+  margin-bottom: 0px;
+}
+
+.idea-items h3 {
+  margin-top: 0px;
+}
+
+
+/* host  */
+
+.host-row {
+  display: flex;
+  align-items: center;
+}
+
+.host-image img {
+  width: 100%;
+}
+
+.host-row li {
+  line-height: 34px;
+}
+
+.host-row .half {
+  margin-bottom: 0px !important;
+}
+
+/* half column */
+
+.half {
+    width: calc(50% - 20px);
+    margin: 0 10px 15px 0;
+}
+
+.half:nth-child(2n) {
+    margin: 0 0 15px 10px;
 }
 
 /* -------  Footer ------- */
@@ -150,43 +239,88 @@ footer p {
   padding: 20px;
 }
 
+@media (max-width: 320px) {
+  .from-group form label {
+    min-width: 68px !important;
+}
+}
+
 /* -------  Media Query ------- */
-@media all and (min-width: 800px) {
-  .group {
-    flex-direction: row;
-    align-items: center;
-  }
+@media (max-width: 768px) {
+    .header-inner {
+      flex-direction: column;
+    }
+    .from-group .from-item .from-field {
+      flex-direction: column;
+    }
+    .from-group .from-item form {
+      flex-direction: column;
+      width: 86%;
+      margin: 0 auto;
+    }
+    .from-group {
+      padding: 15px 20px;
+    }
+    form input {
+      width: 100%;
+    }
+    .from-group form label {
+      min-width: 120px;
+    }
+    .from-group .from-item .from-item-field {
+      flex-direction: row;
+      margin-right: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .from-group .from-item form .search-btn {
+      min-width: 100%;
+    }
+    .about-row {
+      flex-direction: column;
+    }
 
-  .item {
-    flex: 1;
-  }
+    .about-images {
+      flex-direction: column;
+    }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-  }
+    .about-images .half {
+      width: 100%;
+      margin: 0px;
+    }
 
-  header nav ul {
-    align-items: center;
-  }
+    .about-images .image {
+      margin-bottom: 20px;
+    }
 
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .about-row .half {
+      width: 100%;
+      margin-bottom: 20px;
+        margin: 0px;
+    }
 
-  form select,
-  form input {
-    margin-bottom: 0px;
-  }
+    .ideas-row {
+      flex-direction: column;
+    }
 
-  form button {
-    flex: 1;
-  }
+    .idea-items {
+      margin-bottom: 20px;
+    }
 
-  form div {
-    flex-direction: column;
-  }
+    .ideas-row .half {
+      width: 100%;
+      margin: 0px;
+    }
+
+    .host-row {
+      flex-direction: column;
+    }
+
+    .host-row .half {
+      width: 100%;
+      margin: 0px;
+    }
+
 }
