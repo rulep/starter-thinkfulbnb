@@ -208,12 +208,21 @@ form button {
   width: 100%;
 }
 
+.host-row ul {
+  margin-bottom: 0px;
+}
+
 .host-row li {
-  line-height: 34px;
+  line-height: 26px;
 }
 
 .host-row .half {
   margin-bottom: 0px !important;
+}
+
+.host-content {
+  width: 75%;
+  margin: 0 auto;
 }
 
 /* half column */
@@ -239,24 +248,75 @@ footer p {
   padding: 20px;
 }
 
+/* small device */
 @media (max-width: 320px) {
   .from-group form label {
     min-width: 68px !important;
-}
+  }
+
+  .from-group form input {
+        min-width: 147px;
+  }
 }
 
-/* -------  Media Query ------- */
-@media (max-width: 768px) {
+/* form horizontally until there is enough screen real estate, around 1000px screen width */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .from-group .from-item .from-field {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+  }
+  .from-group .from-item form {
+    flex-direction: column;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .from-group {
+    padding: 15px 20px;
+  }
+  form input {
+    width: 100%;
+  }
+  form select {
+  width: 100%;
+  }
+  .from-group form label {
+    min-width: 95px;
+    margin-bottom: 0px;
+  }
+  .from-group .from-item .from-item-field {
+    flex-direction: row;
+    margin-right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .from-group .from-item form .search-btn {
+    min-width: 100%;
+  }
+
+ }
+
+/* -------  Media Query for mobile   ------- */
+@media  (max-width: 480px) {
     .header-inner {
       flex-direction: column;
     }
     .from-group .from-item .from-field {
       flex-direction: column;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: calc(100% - 20px);
     }
     .from-group .from-item form {
       flex-direction: column;
-      width: 86%;
+      width: calc(100% - 30px);
       margin: 0 auto;
+      padding: 15px;
     }
     .from-group {
       padding: 15px 20px;
@@ -264,8 +324,12 @@ footer p {
     form input {
       width: 100%;
     }
+    form select {
+    width: 100%;
+    }
     .from-group form label {
-      min-width: 120px;
+      min-width: 95px;
+      margin-bottom: 0px;
     }
     .from-group .from-item .from-item-field {
       flex-direction: row;
@@ -298,7 +362,7 @@ footer p {
     .about-row .half {
       width: 100%;
       margin-bottom: 20px;
-        margin: 0px;
+      margin: 0px;
     }
 
     .ideas-row {
