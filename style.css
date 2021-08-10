@@ -133,7 +133,7 @@ form input {
 
 form select {
   min-height: 36px;
-    width: 180px;
+  width: 180px;
 }
 
 form button {
@@ -279,9 +279,11 @@ footer p {
   }
   form input {
     width: 100%;
+    max-width: 280px;
   }
   form select {
   width: 100%;
+  max-width: 250px;
   }
   .from-group form label {
     min-width: 95px;
@@ -323,9 +325,11 @@ footer p {
     }
     form input {
       width: 100%;
+      max-width: 200px;
     }
     form select {
     width: 100%;
+    max-width: 180px;
     }
     .from-group form label {
       min-width: 95px;
